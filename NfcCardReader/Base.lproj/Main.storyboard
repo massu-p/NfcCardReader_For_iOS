@@ -10,25 +10,27 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MainMenuView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IcCardReader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MainMenuView" id="BYZ-38-t0r" customClass="ViewController" customModule="NfcCardReader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4f-0t-D9T">
-                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="su9-S8-CQO">
+                                <rect key="frame" x="130.5" y="433" width="153" height="30"/>
+                                <state key="normal" title="カードをスキャンする"/>
+                                <connections>
+                                    <action selector="showCardScanView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BUh-Xa-eae"/>
+                                    <segue destination="zio-Yy-Ebl" kind="showDetail" identifier="showCardScanView" id="QFJ-LV-BSd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="e4f-0t-D9T" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="B6U-T0-SeT"/>
-                            <constraint firstItem="e4f-0t-D9T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T9c-oH-Ivc"/>
+                            <constraint firstItem="su9-S8-CQO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2PI-ht-vTq"/>
+                            <constraint firstItem="su9-S8-CQO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TPw-Fo-UYJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -55,6 +57,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JcO-rs-yca" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="134.78260869565219" y="771.42857142857144"/>
+        </scene>
+        <!--CardScanView-->
+        <scene sceneID="Khe-Sp-OPa">
+            <objects>
+                <viewController title="CardScanView" id="zio-Yy-Ebl" customClass="CardScanViewController" customModule="NfcCardReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sWY-Hm-mzi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t08-Aq-ihQ">
+                                <rect key="frame" x="186" y="438" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="t08-Aq-ihQ" firstAttribute="centerY" secondItem="sWY-Hm-mzi" secondAttribute="centerY" id="6Uu-s1-gCo"/>
+                            <constraint firstItem="t08-Aq-ihQ" firstAttribute="centerX" secondItem="sWY-Hm-mzi" secondAttribute="centerX" id="wAZ-Wc-Wuv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ai1-fd-cfL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6DE-me-3dT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2144.927536231884" y="126.5625"/>
         </scene>
     </scenes>
 </document>

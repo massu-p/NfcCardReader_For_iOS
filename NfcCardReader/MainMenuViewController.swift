@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainMenuViewController.swift
 //  NfcCardReader
 //
 //  Created by 増倉豊 on 2019/05/16.
@@ -15,6 +15,9 @@ class ViewController: UIViewController {
 		// Do any additional setup after loading the view.
 	}
 
-
+    @IBAction func showCardScanView(_ sender: Any) {
+        performSegue(withIdentifier: "showCardScanView", sender: nil)
+    }
+    
 }
 
