@@ -23,7 +23,6 @@
                                 <state key="normal" title="カードをスキャンする"/>
                                 <connections>
                                     <action selector="showCardScanView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BUh-Xa-eae"/>
-                                    <segue destination="zio-Yy-Ebl" kind="showDetail" identifier="showCardScanView" id="QFJ-LV-BSd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -34,7 +33,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="HIi-ge-dF7"/>
+                    <navigationItem key="navigationItem" title="メニュー" id="HIi-ge-dF7"/>
+                    <connections>
+                        <segue destination="zio-Yy-Ebl" kind="show" identifier="showCardScanView" id="VzZ-Jc-uYR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -80,10 +82,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ai1-fd-cfL"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Tq1-0s-PFB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6DE-me-3dT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2144.927536231884" y="126.5625"/>
+            <point key="canvasLocation" x="2125" y="127"/>
         </scene>
     </scenes>
 </document>
